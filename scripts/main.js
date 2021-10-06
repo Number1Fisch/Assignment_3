@@ -1,72 +1,110 @@
-/* Practice Assignment 4:
+/* Practice Assignment 3:
 
 Complete this javascript file according to the individual instructions
 given in the comments. 
 
 *** DO NOT CHANGE any of the code that you are not instructed to. */
 
-// 1) Create a function named helloWorld that returns the exact phrase:
-// "Hello World!".
+// 1) Construct a basic IF statement that assigns "Informatics" to the
+// myDept variable IF the value of myNumber is greater than 1.
+// The variables are already declared.
+// Do not change the existing code.
 
-function helloWorld(){
-  return 'Hello World!';
-}
-
-// 2) Create a function named greeting that will accept a "name" parameter
-// and return the string: "Hello, name." where "name" is replaced
-// with whatever value we want to provide when calling the function.
-
-function greeting(name){
-  return 'Hello, ' + name +'.';
-}
-
-// 3) Create a function named divisibleByThree that accepts a "number" parameter
-// and will return accurate boolean data depending on the value
-// of the "number" parameter. Hint: Try the modulus operator.
-
-function divisibleByThree(number){
-  if (number % 3 == 0){
-    return true;
+const question1 = (myNumber) => {
+    let myDept;
+    /////// write your IF statement below this line /////////
+  if (myNumber>1){
+      myDept = 'Informatics';
   }
-  else {
-    return false;
-  }
-}
-
-// 4) Create a function named averageAge that accepts 3 parameters:
-// num1, num2, and num3. The function should return the average of
-// all three numbers, but the parameter num3 is missing, it should
-// return the average of num1 and num2. Returned results should be
-// rounded to the nearest integer. Hint: Use a Math method to round.
-
-function averageAge(num1, num2, num3){
-  if(num3 == null){
-    return Math.round((num1 + num2)/2);
+    /////// write your IF statement above this line /////////
+    return myDept;
+  };
+  
+  // 2) Construct an IF statement that assigns "JavaScript" to the
+  // myLang variable IF the length property of myValue is equal to 10.
+  // Add an ELSE statement that assigns "Python" otherwise.
+  // The variables are already declared.
+  // Do not change the existing code.
+  
+  const question2 = (myValue) => {
+    let myLang;
+    /////// write your IF statement below this line /////////
+  if(myValue == 10){
+      myLang = 'JavaScript';
   }
   else{
-    return Math.round((num1 + num2 + num3)/3);
+      myLang = 'Python';
   }
-}
-
-// 5) Create a function named leetSpeak that accepts a word
-// as a parameter and returns the same word except all of the letter
-// e occurances (lower case only) are replaced by the number 3.
-// Replace any lower case a with the number 4, too.
-// Hints: You will use a loop. You will use conditionals.
-// Example: leet is returned as l33t. speak is returned as sp34k.
-
-function leetSpeak(word){
-  let newWord = '';
-  for(i = 0; word.length > i; i++){
-    if(word[i] == 'e'){
-  newWord += '3';
+    /////// write your IF statement above this line /////////
+    return myLang;
+  };
+  
+  // 3) Copy the IF / ELSE statement from #2 and paste it below.
+  // Add an ELSE IF statement to it that checks if the length property of
+  // myValue is greater than 3. If true, assign "PHP" to myLang.
+  // The variables are already declared.
+  // Do not change the existing code.
+  
+  const question3 = (myValue) => {
+    let myLang;
+    /////// write your IF statement below this line /////////
+    if(myValue == 10){
+        myLang = 'JavaScript';
     }
-    else if(word[i] == 'a'){
-      newWord += '4';
+    else if(myValue > 3){
+        myLang = 'PHP';
     }
     else{
-      newWord += word[i];
+        myLang = 'Python';
     }
+    /////// write your IF statement above this line /////////
+    return myLang;
+  };
+  
+  // 4) Construct a SWITCH statement that will assign the following values to the variable
+  // myFaveFood based on the value of myNumber the SWITCH statement receives:
+  // 1 = Pizza, 2 = Hamburger, 3 = Ice Cream, 4 = Sushi, Anything else = Pho
+  // The variables are already declared.
+  // Do not change the existing code.
+  
+  const question4 = (myNumber) => {
+    let myFaveFood;
+    /////// write your SWITCH statement below this line /////////
+  switch(myNumber){
+        case 1:
+          myFaveFood = 'Pizza';
+          break;
+        case 2:
+            myFaveFood = 'Hamburger';
+            break;
+        case 3:
+            myFaveFood = 'Ice Cream';
+            break;
+        case 4:
+            myFaveFood = 'Sushi';
+            break;
+        default:
+            myFaveFood = 'Pho';
   }
-  return newWord;
-}
+        
+
+  
+    /////// write your SWITCH statement above this line /////////
+    return myFaveFood;
+  };
+  
+  // 5) Construct a TERNARY statement with the ternary operator
+  // that checks if the variable myTemp is greater than or equal to 75.
+  // If true, assign the value "Great weather!" to the variable myWeather.
+  // If false, assign the value "Still cold." to the variable myWeather.
+  // This ternary operator statement should just be one line of code.
+  // The variables are already declared.
+  // Do not change the existing code.
+  
+  const question5 = (myTemp) => {
+    let myWeather;
+    /////// write your TERNARY OPERATOR statement below this line /////////
+    (myTemp >= 75)?myWeather = 'Great weather!': myWeather = 'Still cold.';
+    /////// write your TERNARY OPERATOR statement above this line /////////
+    return myWeather;
+  };
